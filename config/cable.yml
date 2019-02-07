@@ -6,5 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:282bd5e1838351b0b03d845606e1c021@dory.redistogo.com:9552/
+  " } %>
   channel_prefix: instatalk_production
