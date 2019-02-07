@@ -3,9 +3,13 @@ class Room < ApplicationRecord
 
   has_many :messages
 
+  def to_param
+    token
+  end
+
   private
 
-  def generate_nickname
+  def generate_token
     self.token = SecureRandom.hex(2)
   end
 end
