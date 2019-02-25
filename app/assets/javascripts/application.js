@@ -17,9 +17,14 @@
 //= require_tree .
 
 $(function () {
-   console.log('Document is loaded');
+  console.log('Document is loaded');
 });
 
 $(document).on("turbolinks:load", function () {
-   console.log('document is loaded (turbolinks:load)')
-})
+  console.log('document is loaded (turbolinks:load)')
+});
+
+$(function () {
+  var messages = document.getElementById('messages');
+  messages.scrollTop = messages.scrollHeight;
+});
