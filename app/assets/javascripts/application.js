@@ -24,7 +24,7 @@ $(document).on("turbolinks:load", function () {
   console.log('document is loaded (turbolinks:load)')
 });
 
-$(function () {
-  var messages = document.getElementById('messages');
-  messages.scrollTop = messages.scrollHeight;
-});
+// $(function () {
+//   var messages = document.getElementById('messages');
+//   messages.scrollTop = messages.scrollHeight;
+// });
