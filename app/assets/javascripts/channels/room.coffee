@@ -7,7 +7,7 @@ jQuery(document).on 'turbolinks:load', ->
   $(document).on 'keypress', '#message_body', (event) ->
     message = event.target.value
     if message == "" && event.keyCode is 13
-#     alert('Пустое сообщение низя!')
+      alert('Пустое сообщение низя!')
       return false
       event.preventDefault()
     else
