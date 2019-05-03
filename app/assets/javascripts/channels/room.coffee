@@ -26,5 +26,7 @@ createRoomChannel = (roomId) ->
       console.log('Received message: ' + data['message'])
       $('#messages').append data['message']
 
+      $(messages).animate scrollTop: 20000000, "slow"
+
     speak: (message) ->
       @perform 'speak', message: message
