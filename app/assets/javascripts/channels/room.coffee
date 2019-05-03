@@ -6,15 +6,10 @@ jQuery(document).on 'turbolinks:load', ->
 
   $(document).on 'keypress', '#message_body', (event) ->
     message = event.target.value
-    if message == "" && event.keyCode is 13
-      alert('Пустое сообщение низя!')
-      return false
+    if event.keyCode is 13 && message != ''
+      App.room.speak(message)
+      event.target.value = ""
       event.preventDefault()
-    else
-      if event.keyCode is 13 && message != ""
-        App.room.speak(message)
-        event.target.value = ""
-        event.preventDefault()
 
 createRoomChannel = (roomId) ->
   App.room = App.cable.subscriptions.create {channel: "RoomChannel", roomId: roomId},
